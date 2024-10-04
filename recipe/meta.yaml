@@ -1,5 +1,5 @@
 {% set name = "robocorp-storage" %}
-{% set version = "1.0.4" %}
+{% set version = "1.0.5" %}
 
 package:
   name: {{ name|lower }}
@@ -7,7 +7,7 @@ package:
 
 source:
   url: https://pypi.io/packages/source/{{ name[0] }}/{{ name }}/robocorp_storage-{{ version }}.tar.gz
-  sha256: edecf88d7955a7e2d74b3a9668f26bc830b60cca2d15354620ac19f4c715916b
+  sha256: a410dda8b2bf82308458dbe94ac420dd92ab6cecce5e67bce69ac115a0b99294
 
 build:
   noarch: python
