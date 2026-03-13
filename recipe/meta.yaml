@@ -1,5 +1,5 @@
 {% set name = "robocorp-storage" %}
-{% set version = "1.0.5" %}
+{% set version = "1.1.0" %}
 
 package:
   name: {{ name|lower }}
@@ -7,7 +7,7 @@ package:
 
 source:
   url: https://pypi.org/packages/source/{{ name[0] }}/{{ name }}/robocorp_storage-{{ version }}.tar.gz
-  sha256: a410dda8b2bf82308458dbe94ac420dd92ab6cecce5e67bce69ac115a0b99294
+  sha256: ae9d0f654e88047ea8efcce9d7cbb1017a52993da57b83c38d243395c3198d96
 
 build:
   noarch: python
@@ -15,7 +15,7 @@ build:
     - echo f | xcopy /f /y /S %RECIPE_DIR%\README.md %SRC_DIR%\README.md  # [win]
     - cp -R {{ RECIPE_DIR }}/README.md {{ SRC_DIR }}/README.md  # [unix]
     - {{ PYTHON }} -m pip install . -vv
-  number: 1
+  number: 0
 
 requirements:
   host:
@@ -24,8 +24,8 @@ requirements:
     - pip
   run:
     - python >={{ python_min }},<4.0.0
-    - requests >=2.28.2,<3.0.0
-    - tenacity >=8.0.1,<9.0.0
+    - requests >=2.28.2
+    - tenacity >=8.0.1
     - typing-extensions >=4.5.0,<5.0.0
 
 test:
